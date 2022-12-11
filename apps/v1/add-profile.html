@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <!-- <link rel="stylesheet" href="https://rsms.me/inter/inter.css" /> -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="../js/tailwind.config.js"></script>
+    <link rel="stylesheet" href="../css/tailwind.css" />
+    <title>Docker Swarm Demo</title>
+  </head>
+  <body class="dark:bg-slate-900 flex h-screen items-center">
+    <div class="m-auto">
+      <p class="dark:text-white text-8xl text-center mb-16">
+        Let everyone know you are here!
+      </p>
+      <form action="post">
+        <div class="flex justify-center">
+          <div class="mb-6 w-2/4">
+            <label
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              for="Name"
+            >
+              Your Name
+            </label>
+            <input
+              class="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              id="name"
+              type="text"
+              placeholder="Hello?"
+            />
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="mb-6 w-2/4">
+            <label
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              for="how-was-today"
+            >
+              How was today?
+            </label>
+            <textarea
+              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              id="how-was-today"
+              type="text"
+              placeholder="Did you waste your time today?"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <div class="mb-6 w-2/4">
+            <label
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              for="social"
+            >
+              Where can people find you?
+            </label>
+            <div class="flex">
+              <span
+                class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600"
+              >
+                🌐
+              </span>
+              <input
+                class="block w-full p-4 text-gray-900 border border-gray-300 rounded-r-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                id="social"
+                type="text"
+                placeholder="Come on don't be shy..."
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-8"></div>
+
+        <div class="flex justify-center">
+          <div class="w-2/4 flex justify-end">
+            <button
+              type="button"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Let's GO!
+              <svg
+                aria-hidden="true"
+                class="ml-2 -mr-1 w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

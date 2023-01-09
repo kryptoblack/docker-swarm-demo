@@ -1,0 +1,14 @@
+# FOR DEVELOPMENT PURPOSES ONLY
+version: "3"
+
+services:
+  app:
+    volumes:
+      - ${PWD}/apps/assets/js:/usr/share/nginx/js:ro
+      - ${PWD}/apps/assets/css:/usr/share/nginx/css:ro
+      - ${PWD}/conf/nginx.conf:/etc/nginx/conf.d/default.conf
+      # change the version accordingly
+      # only one can be active at a single point in time
+      - ${PWD}/apps/v1:/usr/share/nginx/html:ro
+        # - ${PWD}/apps/v2:/usr/share/nginx/html:ro
+        # - ${PWD}/apps/v3:/usr/share/nginx/html:ro

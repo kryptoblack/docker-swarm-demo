@@ -15,13 +15,25 @@ $ docker build -t kryptoblack/docker-swarm-demo:v1 --build-arg VERSION={v1|v2|v3
 ### Startup
 
 ```
-$ docker compose -f docker-compose.yaml -f docker-compose.override.yaml up -d
+$ docker compose -f docker-compose.yml up -d
+```
+
+#### For Development
+
+```
+$ docker compose -f docker-compose.yml -f docker-compose.override.yml up -d
 ```
 
 ### Shutdown
 
 ```
-$ docker compose -f docker-compose.yaml -f docker-compose.override.yaml down
+$ docker compose -f docker-compose.yml up -d
+```
+
+#### For Development
+
+```
+$ docker compose -f docker-compose.yml -f docker-compose.override.yml down
 ```
 
 `Note: if you do not need to edit .html, .js, .css, or .conf files, you can ommit both of the -f flags from the above command.`
@@ -46,5 +58,5 @@ $ docker stack deploy -c [COMPOSE-FILE NAME] [STACK NAME]
 #### Example
 
 ```bash
-$ docker stack deploy -c docker-compose.yaml demo
+$ docker stack deploy -c docker-compose.yml demo
 ```

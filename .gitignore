@@ -1,5 +1,4 @@
 # environment variables
-env/
+.env
+configs/env/prod.env
 
-# secrets
-secrets/

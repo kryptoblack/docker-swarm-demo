@@ -1,0 +1,19 @@
+# FOR DEVELOPMENT PURPOSES ONLY
+version: "3"
+
+services:
+  app:
+    env_file:
+      - configs/env/dev.env
+    configs:
+      - source: nginx.conf
+        target: /etc/nginx/conf.d/default.conf
+    volumes:
+      - ${PWD}/apps/assets/js:/usr/share/nginx/js:ro
+      - ${PWD}/apps/assets/css:/usr/share/nginx/css:ro
+      - ${PWD}/configs/nginx/nginx.dev.conf:/etc/nginx/conf.d/default.conf:ro
+      - ${PWD}/apps/${VERSION}:/usr/share/nginx/html:ro
+        
+configs:
+  nginx.conf:
+    file: configs/nginx/nginx.dev.conf

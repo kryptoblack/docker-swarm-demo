@@ -3,16 +3,12 @@ version: "3"
 services:
   app:
     image: kryptoblack/docker-swarm-demo:v1
-    environment:
-      - STAGE=production
     configs:
       - source: nginx.conf
         target: /etc/nginx/conf.d/default.conf
     ports:
       - 80:80
-    secrets:
-      - ssl_certificate
-      - ssl_certificate_key
+      - 443:433
     deploy:
       mode: replicated
       replicas: 1
@@ -38,12 +34,4 @@ services:
 
 configs:
   nginx.conf:
-    name: nginx.conf
     file: configs/nginx/nginx.conf
-
-secrets:
-  ssl_certificate:
-    file: secrets/site.crt
-  ssl_certificate_key:
-    file: secrets/site.key
-

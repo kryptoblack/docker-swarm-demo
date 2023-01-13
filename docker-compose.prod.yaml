@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  app:
+    env_file:
+      - configs/env/prod.env
+    configs:
+      - source: options-ssl-nginx.conf
+        target: /etc/nginx/include/options-ssl-nginx.conf
+    secrets:
+      - ssl_certificate
+      - ssl_certificate_key
+      - ssl_dhparam
+
+configs:
+  options-ssl-nginx.conf:
+    file: /etc/letsencrypt/options-ssl-nginx.conf
+
+secrets:
+  ssl_certificate:
+    file: /etc/letsencrypt/live/${DOMAIN}/fullchain.pem 
+  ssl_certificate_key:
+    file: /etc/letsencrypt/live/${DOMAIN}/privkey.pem
+  ssl_dhparam:
+    file: /etc/letsencrypt/ssl-dhparams.pem
